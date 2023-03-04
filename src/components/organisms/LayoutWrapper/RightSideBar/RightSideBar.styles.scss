@@ -1,0 +1,15 @@
+.side-bar {
+  float: right;
+  width: 300px;
+  margin: 0 0 15px;
+  padding-left: 5px;
+  height: 100%;
+}
+
+@media(max-width: 1100px) {
+  .side-bar {
+    float: none;
+    clear: both;
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+.alert {
+  top: 75px;
+  z-index: 10;
+  position: fixed;
+  width: 70%;
+  max-width: 1000px;
+  min-width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+}

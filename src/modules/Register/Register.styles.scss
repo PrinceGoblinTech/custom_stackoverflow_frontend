@@ -1,0 +1,31 @@
+.auth-page {
+  height: 100vh;
+  width: 100%;
+  background-color: #3d3d3d;
+}
+
+.register-content {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90.7vh;
+}
+
+.register-grid  {
+  display: flex;
+  align-items: center;
+  box-sizing: inherit;
+}
+
+@media (max-width: 799px) {
+  .register-grid {
+    flex-direction: column;
+    padding: 7rem 0;
+  }
+  .register-content {
+    height: auto;
+    margin: auto 0;
+  }
+}

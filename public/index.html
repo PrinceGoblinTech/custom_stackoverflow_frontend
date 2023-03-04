@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' href='%PUBLIC_URL%/LogoGlyphMd.svg' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='theme-color' content='#000000' />
+    <meta
+      name='description'
+      content='Web site created using create-react-app'
+    />
+
+    <title>CLONE Stack Overflow - Where Developers Learn, Share, & Build Careers</title>
+    <link rel='stylesheet' type='text/css' href='https://cdn.sstatic.net/Shared/stacks.css?v=0ee8a05683e7'>
+    <link rel='stylesheet' type='text/css' href='https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=c5fdf309f06b'>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body class='theme-dark'>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id='root'></div>
+    <script src='https://unpkg.com/@stackoverflow/stacks-icons'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+    <script>
+      let pageX = $(document).width();
+      let pageY = $(document).height();
+      let mouseY=0;
+      let mouseX=0;
+
+      $(document).mousemove(function( event ) {
+        mouseY = event.pageY;
+        const yAxis = (pageY / 2 - mouseY) / pageY * 300;
+        mouseX = event.pageX / -pageX;
+        const xAxis = -mouseX * 100 - 100;
+
+        $('.box__ghost-eyes')
+                .css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
+      });
+    </script>
+  </body>
+</html>
